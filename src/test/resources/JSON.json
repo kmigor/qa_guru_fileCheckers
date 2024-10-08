@@ -1,0 +1,18 @@
+{
+    "teamName": "Torro Grill",
+    "teamLogo": "https://example.com/logo.png",
+    "staff": [
+        {
+            "id": 1,
+            "firstName": "Rick",
+            "lastName": "Astley",
+            "vacation": "chief"
+        },
+        {
+            "id": 2,
+            "firstName": "Anna",
+            "lastName": "de Armas",
+            "vacation": "waitress"
+        }
+    ]
+}
