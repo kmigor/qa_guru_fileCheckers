@@ -17,5 +17,4 @@ public class Team {
     public Staff[] getStaff() {
         return staff;
     }
-
 }

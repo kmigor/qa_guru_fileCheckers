@@ -1,10 +1,8 @@
 package checkers;
 
 import com.codeborne.pdftest.PDF;
-
 import java.io.IOException;
 import java.util.zip.ZipInputStream;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PdfChecker {
@@ -14,6 +12,5 @@ public class PdfChecker {
 
         assertThat(pdf.numberOfPages).isEqualTo(10);
         assertThat(pdf.text).contains("Sample PDF Document");
-
     }
 }

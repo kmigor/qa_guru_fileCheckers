@@ -22,5 +22,4 @@ public class Staff {
     public String getVacation() {
         return vacation;
     }
-
 }

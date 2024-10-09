@@ -2,18 +2,16 @@ package checkers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Team;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JsonChecker {
     ClassLoader cl = JsonChecker.class.getClassLoader();
     public void checkJson(String fileName) throws IOException {
-        String jsonString = readJsonFromResource("JSON.json");
+        String jsonString = readJsonFromResource(fileName);
         ObjectMapper objectMapper = new ObjectMapper();
         Team team = objectMapper.readValue(jsonString, Team.class);
         assertThat(team.getTeamName()).isEqualTo("Torro Grill");

@@ -3,7 +3,6 @@ import com.opencsv.exceptions.CsvException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import checkers.ZipChecker;
-
 import java.io.IOException;
 
 public class FileParsingTests {
@@ -23,6 +22,4 @@ public class FileParsingTests {
         JsonChecker jsonChecker = new JsonChecker();
         jsonChecker.checkJson(jsonName);
     }
-
-
 }

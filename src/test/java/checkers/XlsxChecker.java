@@ -2,19 +2,15 @@ package checkers;
 
 import com.codeborne.xlstest.XLS;
 import org.apache.poi.ss.usermodel.Sheet;
-
 import java.io.IOException;
 import java.util.zip.ZipInputStream;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class XlsxChecker {
 
-
     public void checkXlsx (ZipInputStream zis) throws IOException {
         XLS xls = new XLS(zis);
         Sheet sheet = xls.excel.getSheetAt(0);
-
 
         assertThat(sheet.getRow(7).getCell(1).getStringCellValue()).contains("Marketing");
         assertThat(sheet.getRow(7).getCell(2).getStringCellValue()).contains("Content Creation");
@@ -27,6 +23,5 @@ public class XlsxChecker {
                                                                                 .hasMonth(1)
                                                                                 .hasYear(2024);
         assertThat(sheet.getRow(7).getCell(7).getNumericCellValue()).isEqualTo(1.0);
-
     }
 }

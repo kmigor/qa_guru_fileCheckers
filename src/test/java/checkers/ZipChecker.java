@@ -1,17 +1,14 @@
 package checkers;
 
 import com.opencsv.exceptions.CsvException;
-
 import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-
 import static com.google.common.io.Files.getFileExtension;
 
 public class ZipChecker {
 
     ClassLoader cl = ZipChecker.class.getClassLoader();
-
     private final CsvChecker csvChecker = new CsvChecker();
     private final PdfChecker pdfChecker = new PdfChecker();
     private final XlsxChecker xlsxChecker = new XlsxChecker();
@@ -31,6 +28,5 @@ public class ZipChecker {
                 }
             }
         }
-
     }
 }
